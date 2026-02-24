@@ -1,1 +1,1 @@
-# lead-miner-n8n
+# lead-scoring-automation-b2b
