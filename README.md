@@ -1,4 +1,4 @@
-# 🚀 Automação Inteligente de Lead Scoring B2B
+# 🚀 PT BR - Automação Inteligente de Lead Scoring B2B
 
 Projeto de automação desenvolvido no n8n com integração de APIs públicas e uso de Inteligência Artificial para classificação estratégica de leads no segmento B2B (construção civil e materiais).
 
@@ -129,4 +129,140 @@ O prompt foi cuidadosamente estruturado para:
 - Integração com CRM
 
 ---
+© 2026 Rayana Santos — All rights reserved.
+
+
+---
+# 🚀 EN - Intelligent B2B Lead Scoring Automation
+
+Automation project built with **n8n**, integrating public APIs and Artificial Intelligence for strategic lead classification in the B2B segment (construction and building materials industry).
+
+---
+
+## 📌 Objective
+
+To create an automated workflow capable of:
+
+- Capturing company data via public APIs  
+- Automatically validating Brazilian business registrations (CNPJ)  
+- Enriching digital presence data (Google Maps + Website)  
+- Applying AI-based intelligent classification  
+- Generating a commercial potential score (0–100)  
+- Categorizing leads as: Cold, Warm or Hot  
+
+The project focuses on **low operational cost with high strategic efficiency**.
+
+---
+
+## 🏗 Project Architecture
+
+The workflow was structured into four major stages:
+
+### 1️⃣ Data Collection
+
+- Receita Federal API → Official company registration data  
+- Google Maps API → Digital presence, phone, reviews, website  
+
+---
+
+### 2️⃣ Validation
+
+- Active business registration (CNPJ) verification  
+- Automatic discard of invalid records  
+- Duplicate control (prevents reprocessing)  
+- Incremental database storage  
+
+---
+
+### 3️⃣ Digital Enrichment
+
+- Website identification  
+- HTML extraction  
+- Conversion into structured JSON  
+- Consolidation of official + digital data  
+
+---
+
+### 4️⃣ AI-Based Classification
+
+Use of an AI model (OpenRouter / open-source model) with a structured prompt for:
+
+- Registration analysis  
+- Commercial analysis  
+- Digital presence analysis  
+- Online reputation evaluation  
+- Strategic scoring calculation  
+
+The response is strictly enforced to return a valid JSON output to ensure predictability and safe system integration.
+
+---
+
+## 🎯 Scoring Logic
+
+| Criteria | Points |
+|----------|--------|
+| Business formalization (active registration, company size, legal nature) | 25 |
+| Digital contact availability (phone, email, website) | 25 |
+| Business stability (market time + share capital) | 20 |
+| Commercial potential (sector fit) | 20 |
+| Online reputation | 10 |
+
+### Final Classification
+
+- 🔥 80–100 → Hot Lead  
+- 🌤 60–79 → Warm Lead  
+- ❄ 0–59 → Cold Lead  
+
+---
+
+## 🧠 AI Strategy
+
+The prompt was carefully designed to:
+
+- Minimize hallucinations  
+- Prevent disclosure of internal reasoning  
+- Enforce JSON-only output  
+- Maintain schema consistency  
+- Ensure predictable and structured responses  
+
+---
+
+## 🛠 Tech Stack
+
+- n8n (workflow orchestration)  
+- Receita Federal API  
+- Google Maps API  
+- HTML request module  
+- OpenRouter (LLM integration)  
+- Standardized JSON structure  
+
+---
+
+## 💡 Project Highlights
+
+- Fully scalable automation  
+- Low-cost architecture (free/open-source model usage)  
+- Duplicate control mechanism  
+- Business-oriented classification  
+- Modular design  
+
+---
+
+## 📊 Expected Outcomes
+
+- Reduced operational qualification time  
+- Intelligent lead prioritization  
+- Structured database for sales teams  
+- Data-driven decision making  
+
+---
+
+## 🔮 Next Steps
+
+- Power BI dashboard integration  
+- Supervised model refinement  
+- CRM integration  
+
+---
+
 © 2026 Rayana Santos — All rights reserved.
