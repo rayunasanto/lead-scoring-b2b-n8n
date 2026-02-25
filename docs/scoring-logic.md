@@ -156,8 +156,4 @@ Isso permite:
 - A/B testing de critérios
 
 ---
-
-# 👩🏻‍💻 Author
-
-Rayana Aparecida  
-Engenharia de Dados | Automação | IA aplicada a negócios
+© 2026 Rayana Santos — All rights reserved.
