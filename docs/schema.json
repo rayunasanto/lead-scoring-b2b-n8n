@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lead Scoring Output Schema",
+  "description": "Schema de saída do módulo de classificação inteligente de leads B2B.",
+  "type": "object",
+
+  "properties": {
+    "razao_social": { "type": "string" },
+    "cnpj": { "type": "string" },
+    "porte": { "type": "string" },
+    "ramo": { "type": "string" },
+    "capital_social": { "type": "string" },
+    "municipio_matriz": { "type": "string" },
+    "uf": { "type": "string" },
+    "endereco": { "type": "string" },
+
+    "telefone_google": { "type": "string" },
+    "telefone_matriz": { "type": "string" },
+    "email": { "type": "string" },
+    "website": { "type": "string" },
+
+    "horario_funcionamento": {
+      "type": ["object", "string"],
+      "properties": {
+        "segunda_sexta": { "type": "string" },
+        "sabado": { "type": "string" },
+        "domingo": { "type": "string" }
+      }
+    },
+
+    "ranking_google": {
+      "type": ["number", "string"]
+    },
+
+    "socio_nome": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "data_abertura": { "type": "string" },
+    "situacao": { "type": "string" },
+    "nome_fantasia": { "type": "string" },
+    "natureza_juridica": { "type": "string" },
+
+    "presenca_digital": {
+      "type": ["object", "string"],
+      "properties": {
+        "redes_sociais": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "publicacoes_recorrentes": { "type": "boolean" },
+        "interacao_usuarios": { "type": "boolean" }
+      }
+    },
+
+    "potencial_IA": {
+      "type": "string",
+      "enum": ["alto", "médio", "baixo"]
+    },
+
+    "resumo_analise": { "type": "string" },
+
+    "overall_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+
+    "bucket": {
+      "type": "string",
+      "enum": ["frio", "morno", "quente"]
+    },
+
+    "signals_positive": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "signals_negative": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "missing_fields": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+
+    "potencial_comercial": {
+      "type": "string",
+      "enum": ["baixo", "médio", "alto"]
+    },
+
+    "potencial_digital": {
+      "type": "string",
+      "enum": ["baixo", "médio", "alto"]
+    },
+
+    "rationale": { "type": "string" },
+
+    "next_actions": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+
+  "required": [
+    "razao_social",
+    "cnpj",
+    "situacao",
+    "porte",
+    "ramo",
+    "municipio_matriz",
+    "email",
+    "website",
+    "ranking_google",
+    "overall_score",
+    "bucket",
+    "potencial_comercial",
+    "potencial_digital",
+    "confidence",
+    "rationale",
+    "next_actions"
+  ],
+
+  "additionalProperties": false
+}
