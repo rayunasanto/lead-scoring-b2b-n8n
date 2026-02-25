@@ -109,3 +109,6 @@ O modelo foi instruído a:
 - Preencher com string vazia quando necessário
 - Nunca utilizar markdown
 - Nunca incluir texto fora do objeto JSON
+
+---
+© 2026 Rayana Santos — All rights reserved.
