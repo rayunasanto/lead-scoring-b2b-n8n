@@ -129,8 +129,4 @@ O prompt foi cuidadosamente estruturado para:
 - Integração com CRM
 
 ---
-
-## 👩🏻‍💻 Sobre
-
-Desenvolvido por Rayana Santos  
-Engenharia de Dados | Automação | IA aplicada a negócios
+© 2026 Rayana Santos — All rights reserved.
