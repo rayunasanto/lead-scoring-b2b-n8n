@@ -11,9 +11,19 @@
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License" />
 </p>
 
+**🌐 Idioma:** **Português** · [English](README.en.md)
+
 ---
 
 ## 🎬 Visão Geral do Fluxo
+
+<!--
+  GIF do workflow rodando no n8n. Para gerar:
+  1. Abra o workflow no n8n e clique em "Execute Workflow".
+  2. Grave a tela (ScreenToGif no Windows, ou Kap/Gifox no Mac) por ~10-15s.
+  3. Salve o arquivo como flow/demo.gif e remova o comentário da linha abaixo.
+-->
+<!-- ![Demonstração do workflow rodando](flow/demo.gif) -->
 
 ![Diagrama do fluxo no n8n](flow/flow-diagram.png)
 
@@ -186,13 +196,30 @@ Esses campos permitem **auditoria posterior**, **explicabilidade do modelo** e *
 
 ---
 
-## 📈 Resultados Esperados
+## 📈 Resultados e Impacto
+
+### Benefícios
 
 - ⏱ **Redução do tempo** de qualificação manual de leads
 - 🎯 **Priorização inteligente** — o time foca primeiro nos leads quentes
 - 🗂 **Base estruturada e padronizada** para o comercial
 - 📊 **Decisão orientada por dados**, não por intuição
 - 💰 **Custo operacional mínimo** (APIs públicas + modelo gratuito)
+
+### Métricas (estimativas ilustrativas)
+
+> ⚠️ **Valores ilustrativos** para demonstrar o tipo de impacto medido pelo pipeline.
+> Substitua pelos números reais após executar com sua própria base.
+
+| Métrica | Valor | Como é obtida |
+|---------|:-----:|---------------|
+| Tempo de qualificação por lead | **~8 min → ~5 s** | Manual vs. automatizado pelo workflow |
+| Chamadas de API evitadas | **proporcional aos CNPJs repetidos** | Etapa de deduplicação (cap. 3️⃣) |
+| Custo de IA por lead | **~US$ 0,00** | Modelo open-source via OpenRouter |
+| Cobertura de classificação | **100% dos CNPJs ativos** | Todo lead válido recebe score + bucket |
+| Confiança média da IA | **0.93** *(no exemplo)* | Campo `confidence` na saída |
+
+**Metodologia das estimativas:** o ganho de tempo compara a triagem manual (consultar CNPJ na Receita, buscar site, avaliar porte e reputação) com a execução automatizada. A economia de API vem da deduplicação, que ignora CNPJs já processados antes de qualquer nova chamada. O custo de IA é zero por usar modelo gratuito via OpenRouter.
 
 ---
 
@@ -220,8 +247,10 @@ lead-scoring-b2b-n8n/
 │   └── sample-output.json   # Exemplo real de lead classificado
 ├── flow/
 │   ├── n8n-flow.json        # Workflow exportado do n8n
-│   └── flow-diagram.png     # Diagrama visual do fluxo
-└── README.md
+│   ├── flow-diagram.png     # Diagrama visual do fluxo
+│   └── demo.gif             # (opcional) GIF do workflow rodando
+├── README.md                # Documentação (PT-BR)
+└── README.en.md             # Documentation (English)
 ```
 
 ---
